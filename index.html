@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.google.com/specimen/Josefin+Sans?categoryFilters=Sans+Serif:%2FSans%2F*&preview.script=Latn" rel="stylesheet">
+    <title>Riddle</title>
+    <link rel="icon" href="https://png.pngtree.com/recommend-works/png-clipart/20250219/ourmid/pngtree-a-green-question-mark-png-image_15471765.png" type="image/png">
+    <style>
+        #rid {
+            font-size: 48px;
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: top-center;
+            margin-top: 0;
+        }
+        body {
+            background-color: #023020;
+            color: white;
+            position: center;
+        }
+        #sol
+        {
+            font-size: 24px;
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: top-center;
+        }
+        #question
+        {
+            font-size: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: top-center;
+        }
+        #answer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50%;
+        }
+        #button
+        {
+            font-size: 18px;
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: top-center;
+            position: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="rid">RIDDLE</h1>
+     <h2 id="sol">Solve this:</h2>
+    <p id="question">5 + 3 = ?</p>
+
+    <input type="number" id="answer" placeholder="Your answer">
+    <button onclick="checkAnswer()" id="button">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer() {
+            let userAnswer = document.getElementById("answer").value;
+
+            if (userAnswer == 8) {
+                document.getElementById("result").innerText = "Correct! Redirecting...";
+                
+                // Redirect to YouTube
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            } else {
+                document.getElementById("result").innerText = "Wrong answer, try again!";
+            }
+        }
+    </script>
+</body>
+</html>
